@@ -1,6 +1,6 @@
 from collections import Counter
 
-numOfData = int(input("How many documents would you like to scan? "))
+numOfData = int(input("How many documents would you like to scan? (Up to 10): "))
 
 i = 0
 displayedI = str(i)
@@ -11,13 +11,9 @@ finalData = []
 while i < numOfData:
     newAddress = input("Address of document " + displayedI + ": ")
     docList.append(newAddress)
-
     i += 1
     displayedI = str(i)
-
-print(docList)
-indexList = 0
-
+    
 for idx, x in enumerate(docList):
     file = open(docList[idx], 'r')
     data_set = file.read().strip()
@@ -27,6 +23,44 @@ for idx, x in enumerate(docList):
     most_occuring = CounterVariable.most_common(20)
     finalData.append(most_occuring)
 
-    
-print(finalData)
+
+if len(docList) < 1:
+    doc1 = finalData
+    print(doc1)
+
+elif len(docList) == 1:
+    doc1 = finalData[0]
+    doc2 = finalData[1]
+    print(doc1)
+elif len(docList) == 2:
+    doc1 = finalData[0]
+    doc2 = finalData[1]
+    doc3 = finalData[2]
+    print(doc1, doc2, doc3)
+elif len(docList) == 2:
+    doc1 = finalData[0]
+    doc2 = finalData[1]
+    doc3 = finalData[2]
+    doc4 = finalData[3]
+    print(doc1, doc2, doc3, doc4)
+elif len(docList) == 3:
+    doc1 = finalData[0]
+    doc2 = finalData[1]
+    doc3 = finalData[2]
+    doc4 = finalData[3]
+    doc5 = finalData[4] 
+    print(doc1, doc2, doc3, doc4, doc5)
+elif len(docList) == 4:
+    doc1 = finalData[0]
+    doc2 = finalData[1]
+    doc3 = finalData[2]
+    doc4 = finalData[3]
+    doc5 = finalData[4] 
+    doc6 = finalData[5]
+    print(doc1, doc2, doc3, doc4, doc5, doc6)
+else: 
+    print("You have selected to many documents")
+
+
+
 
