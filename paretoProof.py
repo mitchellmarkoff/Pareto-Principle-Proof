@@ -13,14 +13,25 @@ while i < numOfData:
     docList.append(newAddress)
     i += 1
     displayedI = str(i)
+
+fname = newAddress
+ 
+num_words = 0
+ 
+
+
     
 for idx, x in enumerate(docList):
+    with open(fname, 'r') as f:
+    for line in f:
+        words = line.split()
+        num_words += len(words)
     file = open(docList[idx], 'r')
     data_set = file.read().strip()
     file.close()
     split_set = data_set.split()
     CounterVariable = Counter(split_set)
-    most_occuring = CounterVariable.most_common(20)
+    most_occuring = CounterVariable.most_common(Math.floor(.2 * num_words))
     finalData.append(most_occuring)
 
 

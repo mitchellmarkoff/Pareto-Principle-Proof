@@ -1,1 +1,3 @@
 # Pareto-Principle-Proof
+## This project is not complete. Running it will result in failure
+- The Pareto Principle states that everything in life follows a distribution pattern of 20/70. Meaning that the top 20% of a population account for 70% of that populations products. For example the top 20% of Americans own 70% of the land and in word document, the 20% most used words account for 70% of the total word content/count
